@@ -1,0 +1,129 @@
+/*全局部分*/
+/*字体引入*/
+@font-face{font-family:'a';src:url(../font/a.ttf)}
+@font-face{font-family:'b';src:url(../font/b.ttf)}
+@font-face{font-family:'c';src:url(.../font/c.ttf)}
+/*全局*/
+*{font-family:'c';padding:0;margin:0}
+/*整体*/
+body{text-align:center;background:#001443 no-repeat url(../img/back.gif) 0 -56%;background-size:cover;-webkit-user-select:none}
+/*其他部分*/
+/*时间*/
+.time{top:18%;width:100%;height:36px;font-family:'a';font-size:48px;text-align:center;position:absolute;opacity:1;-webkit-animation:shijian 2s;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-image:-webkit-linear-gradient(left,#888,#888,#159,#195,#888,#888)}
+#ttime{background-image:-webkit-linear-gradient(left,#fff,#fff,#4bf,#4fb,#fff,#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+/*书签历史*/
+.q{position:absolute;width:80px;height:30px;border:none;border-radius:3px;outline:0;font-size:24px;font-weight:bold;top:18%;z-index:5;opacity:0}
+.q:active:after{content:attr(msg);border:1px solid #ddd;border-radius:5px;position:absolute;top:-50px;left:0;width:80px;color:#fff;font-weight:bold;z-index:-5;-webkit-animation:danxian 5s}
+/*书签*/
+.sq{right:50%;color:#4af;background:#159;-webkit-animation:shuqian 5s}
+/*历史*/
+.ls{left:50%;color:#4fa;background:#195;-webkit-animation:lishi 5s}
+/*刷新*/
+.sx{background:transparent url(../img/WQY916.png);border:solid 1px transparent;outline:0;left:75%;top:75%;width:56px;height:42px;position:absolute;-webkit-animation:danruMovet 1.5s;-webkit-touch-callout:none}
+
+/*搜索部分*/
+/*搜索框*/
+.search_bar{-webkit-animation:danruMoveb 1.5s;box-shadow:0 0 5px #159;background:#068;border-radius:3px;display:table;top:32%;left:10%;width:80%;height:18px;position:absolute;z-index:10}
+.search_bar span{display:block;font-size:12px;overflow:hidden;padding-left:2px;margin-right:42px;vertical-align:middle}
+/*输入框*/
+.search_bar .si{margin:0 24px 0 12px}
+#search_input{width:100%;height:25px;background:0 0;border:none;outline:0;font-size:16px;font-weight:bold;color:#4af}
+/*建议框*/
+#suggest{-webkit-animation:shensuo .5s;position:absolute;display:none;left:-1px;right:-1px;top:27px;border-radius:3px;font-weight:bold;box-shadow:0 0 5px #159;background:#068;line-height:36px}
+/*建议选项正常*/
+#suggest li{color:#4af;list-style-type:none;border-bottom:1px solid #079;text-align:left;padding-left:12px}
+/*建议选项选中*/
+#suggest li:active{border-radius:3px;background:#39a}
+/*建议选项加号*/
+#suggest li b:before{content:'╋';float:right;text-shadow:0 0 3px #fa2;border-left:1px solid #079;padding:0 20px 0 20px;height:auto;color:#fff}
+/*搜索提交按键*/
+#search_submit{outline:0;height:25px;float:right;color:#fff;font-size:18px;font-weight:500;border:none;text-shadow:0 0 3px #fa2;border-left:1px solid #079;background:0 0;padding:0 13px 0 13px}
+/*建议收起按键*/
+#suggest .close{float:right;font-weight:bold;color:#fff;padding:0 14px 0 14px;text-shadow:0 0 3px #fa2;border-left:1px solid #079}
+/*搜索清空按键*/
+.search_bar span p{display:none;float:right;width:2px;height:16px;margin:4px 12px 0 0;background:#fff;box-shadow:0 0 3px #fa2;-webkit-animation:zhuandong .5s;-webkit-transform:rotate(45deg)}
+.search_bar span p:before{content:'';position:absolute;box-shadow:0 0 3px #fa2;width:16px;height:2px;left:-7px;top:7px;background:#fff}
+
+/*书签部分*/
+/*内容*/
+#content{-webkit-animation:danruDown 1.5s;top:42%;width:100%;position:absolute;text-align:center}
+/*容器*/
+.box{position:relative;display:inline-table;width:60px;margin:0}
+/*标签*/
+.bq{background:0 0;border:none;outline:0;width:50px;height:50px;position:absolute;left:5px;top:0;z-index:5}
+/*标题*/
+.url{-webkit-animation:danruMover 1.5s;color:#fa3;height:18dp;line-height:18dp;width:60px;font-size:20px;font-weight:bold;text-overflow:ellipsis;padding-top:3px;padding-bottom:3px;background-image:-webkit-linear-gradient(top,#4bf,#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+/*图标*/
+.icon{-webkit-animation:zhuandong1 1.5s,zhuandong2 infinite linear 5s;width:50px;height:50px}
+
+/*动画部分*/
+/*时间&隐藏*/
+@-webkit-keyframes shijian{
+0%{opacity:0}
+100%{opacity:0}}
+/*书签&左入*/
+@-webkit-keyframes shuqian{
+0%{opacity:1;-webkit-transform:translate(-200px,0) scale(0,0)}
+40%{opacity:1;-webkit-transform:translate(0,0) scale(1,1)}
+100%{opacity:0;-webkit-transform:translate(0,0) scale(1,1)}}
+/*历史&右入*/
+@-webkit-keyframes lishi{
+0%{opacity:1;-webkit-transform:translate(200px,0) scale(0,0)}
+40%{opacity:1;-webkit-transform:translate(0,0) scale(1,1)}
+100%{opacity:0;-webkit-transform:translate(0,0) scale(1,1)}}
+/*旋转*//*未启用*/
+@-webkit-keyframes xuanzhuan{
+0%{-webkit-transform:rotate(0)}
+50%{-webkit-transform:rotate(0)}
+100%{-webkit-transform:rotate(360deg)}}
+/*建议&伸缩*/
+@-webkit-keyframes shensuo{
+0%{opacity:0;width:25%}
+100%{opacity:1;width:100%}}
+/*清空&转动*/
+@-webkit-keyframes zhuandong{
+0%{opacity:0;-webkit-transform:rotate(0) scale(0,0)}
+100%{opacity:1;-webkit-transform:rotate(225deg) scale(1,1)}}
+/*图标&淡入*/
+@-webkit-keyframes zhuandong1{
+0%{opacity:0;-webkit-transform:rotate(-180deg) scale(0,0)}
+100%{opacity:1;-webkit-transform:rotate(0) scale(1,1)}}
+/*图标&转动*/
+@-webkit-keyframes zhuandong2{
+0%{opacity:1;-webkit-transform:rotate(0)}
+50%{opacity:.5;-webkit-transform:rotate(180deg)}
+100%{opacity:1;-webkit-transform:rotate(360deg)}}
+/*淡入*//*未启用*/
+@-webkit-keyframes danru{
+0%{opacity:0;-webkit-transform: scale(0,0)}
+100%{opacity:1;-webkit-transform: scale(1,1)}}
+/*淡入平移*//*未启用*/
+@-webkit-keyframes danruMove{
+0%{opacity:0;-webkit-transform:translate(-20px,0)}
+100%{opacity:1;-webkit-transform:translate(0,0)}}
+/*淡入平移&上入*/
+@-webkit-keyframes danruMovet{
+0%{opacity:0;-webkit-transform:translate(0,200px) scale(0,0)}
+100%{opacity:1;-webkit-transform:translate(0,0) scale(1,1)}}
+/*淡入平移&右入*/
+@-webkit-keyframes danruMover{
+0%{opacity:0;-webkit-transform:translate(200px,0) scale(0,0)}
+100%{opacity:1;-webkit-transform:translate(0,0) scale(1,1)}}
+/*淡入平移&下入*/
+@-webkit-keyframes danruMoveb{
+0%{opacity:0;-webkit-transform:translate(0,-200px) scale(0,0)}
+100%{opacity:1;-webkit-transform:translate(0,0) scale(1,1)}}
+/*淡入平移&左入*//*未启用*/
+@-webkit-keyframes danruMovel{
+0%{opacity:0;-webkit-transform:translate(-200px,0) scale(0,0)}
+100%{opacity:1;-webkit-transform:translate(0,0) scale(1,1)}}
+/*淡入下沉&书签*/
+@-webkit-keyframes danruDown{
+0%{opacity:0;-webkit-transform:translate(-50px,-30px)}
+100%{opacity:1;-webkit-transform:translate(0,0)}}
+/*单显&提示*/
+@-webkit-keyframes danxian{
+0%{opacity:0;-webkit-transform:translate(0,50px) scale(0,0)}
+20%{opacity:1;-webkit-transform:translate(0,0) scale(1,1)}
+40%{opacity:.5;-webkit-transform:translate(0,0) scale(1,1)}
+100%{opacity:.5;-webkit-transform:translate(0,0) scale(1,1)}}
