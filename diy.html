@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!-- by WQY916 -->
+<!-- 版本？我都不知道是第几版。。。 -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title id="title"></title>
+<link rel="stylesheet" href="css/diy.css" media="screen" type="text/css" />
+<link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" type="text/css" />
+</head>
+<body>
+
+<button class="q sq" msg="书签" onclick="window.location.href='folder://'">书签</button>
+<button class="q ls" msg="历史" onclick="window.location.href='history://'">历史</button>
+<button class="sx" onclick="window.location.href='javascript:location.reload();'"></button>
+
+<p class="time">88:88:88</p>
+<div class="time" id="ttime"></div>
+<script type="text/javascript"> 
+function showLocale(t) 
+{ 
+var str; 
+var hh = t.getHours();  
+var mm = t.getMinutes(); 
+var ss = t.getSeconds(); 
+if(hh<10) hh = '0' + hh;
+if(mm<10) mm = '0' + mm;
+if(ss<10) ss = '0' + ss;
+if(ss%2==0) dot = ':';else dot = ' ';
+str = hh + ":" + mm + dot + ss; 
+return(str); 
+} 
+function tick() 
+{ 
+var d; 
+d = new Date(); 
+document.getElementById("ttime").innerHTML = showLocale(d); 
+window.setTimeout("tick()", 1000); 
+} 
+tick();
+</script> 
+
+<form id="search_form" onsubmit="return search()" class="search_bar">
+<input type="submit" id="search_submit" value="OK"  >
+<span>
+<p id="clear" onclick="clear_seach()"></p>
+<div class="si">
+<input class="search" type="text" value="" onkeyup="get_suggest()" onfocus="get_suggest()" onpaste="get_suggest()" autocomplete="off" id="search_input" placeholder="What do you want to know?">
+</div>
+</span>
+<div id="suggest">
+<ul id="suglist"></ul>
+<div class="close" onclick="close_sug()">收起</div>
+</div>
+</form>
+
+<div id="content">
+
+<!-- 一句代码关闭状态 -->
+<!--
+<script type="text/javascript" src="http://yiju.ml/api/word.php?m=js"></script>
+<script>document.write("<div style=\"text-align:center;font-weight:bold;font-size:24px;text-shadow:0 0 3px #fa2;background-image: -webkit-linear-gradient(left,#4bf,#fa4,#4bf,#fa4,#4bf,#af4,#4bf,#fa4,#4bf);-webkit-background-clip: text;-webkit-text-fill-color: transparent;\">"+str[0].replace(/，/g, "<br>").replace(/。/g,"<br>").replace(/；/g,"<br>")+"</div><div style=\"padding-top:3px;text-align:right;height:18px;font-size:16px;text-shadow:0 0 5px #fff;background-image: -webkit-linear-gradient(top,#fa4,#fff);-webkit-background-clip: text;-webkit-text-fill-color: transparent;\">——"+str[1]+"</div>");</script>
+-->
+
+<div class="box">
+<button class="bq" onclick="window.location.href='https://www.google.com'"></button>
+<img class="icon" src="img/google.png" >
+<p class="url">谷歌</p>
+</div>
+
+<div class="box">
+<button class="bq" onclick="window.location.href='http://coolapk.com'"></button>
+<img class="icon" src="img/cool.png" >
+<p class="url">酷安</p>
+</div>
+
+<div class="box">
+<button class="bq"onclick="window.location.href='http://bbs.mumayi.com'"></button>
+<img class="icon" src="img/mayi.png" >
+<p class="url">木蚂蚁</p>
+</div>
+
+<div class="box">
+<button class="bq"onclick="window.location.href='https://m.baidu.com'"></button>
+<img class="icon" src="img/baidu.png" >
+<p class="url">百度</p>
+</div>
+
+<div class="box">
+<button class="bq" onclick="window.location.href='https://pan.baidu.com/wap/home'"></button>
+<img class="icon" src="img/yun.png" >
+<p class="url">云盘</p>
+</div>
+
+<div class="box">
+<button class="bq" onclick="window.location.href='http://1year.cc'"></button>
+<img class="icon" src="img/door.png" >
+<p class="url">1 Year</p>
+</div>
+
+<div class="box">
+<button class="bq"onclick="window.location.href='http://viayoo.com'"></button>
+<img class="icon" src="img/door.png" >
+<p class="url">任意门</p>
+</div>
+
+<div class="box">
+<button class="bq" onclick="window.location.href='http://m.bilibili.com/index.html'"></button>
+<img class="icon" src="img/bilibili.png" >
+<p class="url">bilibili</p>
+</div>
+
+<div class="box">
+<button class="bq" onclick="window.location.href='http://tool.lu/css/'"></button>
+<img class="icon" src="img/door.png" >
+<p class="url">css美化</p>
+</div>
+
+<div class="box">
+<button class="bq" onclick="window.location.href='https://green.ssyar.com/'"></button>
+<img class="icon" src="img/mao.png" >
+<p class="url">原谅他</p>
+</div>
+
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="js/diy.js"></script>
+
+</body>
+</html>
